@@ -1,0 +1,2 @@
+# We don't need the node_modules in git. 
+node_modules
