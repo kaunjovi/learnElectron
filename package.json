@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kaunjovi/learnElectron/issues"
   },
-  "homepage": "https://github.com/kaunjovi/learnElectron#readme"
+  "homepage": "https://github.com/kaunjovi/learnElectron#readme",
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
 }
