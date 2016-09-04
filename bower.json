@@ -4,6 +4,7 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-material": "^1.1.1",
-    "material-design-lite": "^1.2.0"
+    "material-design-lite": "^1.2.0",
+    "angular-smart-table": "^2.1.8"
   }
 }

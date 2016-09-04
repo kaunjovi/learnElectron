@@ -8,15 +8,49 @@
 
 <script src="./bower_components/material-design-lite/material.min.js"></script>
 <script src="./bower_components/angular/angular.min.js"></script>
+<script src="./bower_components/angular-smart-table/dist/smart-table.min.js"></script>
+
+
+<script>
+var app = angular.module("passwordModule", ['smart-table']); 
+app.controller("passwordCtrl", function($scope) {
+    $scope.passwordList = ["Milk", "Bread", "Cheese"];
+    $scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+});
+</script>
 
 <body>
-  <h1>My Passwords/h1>
+  <h1>My Passwords</h1>
 
-<div ng-app="">
- 	<p>Name : <input type="text" ng-model="name"></p>
- 	<h1>Hello {{name}}</h1>
-</div>
-
+  <div ng-app="passwordModule" ng-controller="passwordCtrl">
+    <ul>
+      <li ng-repeat="password in passwordList">{{password}}</li>
+    </ul>
+    <table st-table="rowCollection" class="table table-striped">
+      <thead>
+        <tr>
+          <th>first name</th>
+          <th>last name</th>
+          <th>birth date</th>
+          <th>balance</th>
+          <th>email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="row in rowCollection">
+          <td>{{row.firstName}}</td>
+          <td>{{row.lastName}}</td>
+          <td>{{row.birthDate}}</td>
+          <td>{{row.balance}}</td>
+          <td>{{row.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <!--Used Electron applications. -->
   <!--<p>
