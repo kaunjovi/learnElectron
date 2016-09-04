@@ -5,6 +5,17 @@
 <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 <link href="./bower_components/material-design-lite/material.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+  body {
+    padding-top: 60px;
+    padding-right: 5px ; 
+    padding-left: 5px ; 
+    padding-bottom: 60px ; 
+
+  }
+</style>
+
 
 <script src="./bower_components/material-design-lite/material.min.js"></script>
 <script src="./bower_components/angular/angular.min.js"></script>
@@ -14,72 +25,117 @@
 <script>
 var app = angular.module("passwordModule", ['smart-table']); 
 app.controller("passwordCtrl", function($scope) {
-    $scope.passwordList = ["Milk", "Bread", "Cheese"];
-    $scope.rowCollection = [
-        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
-        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
-        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    $scope.credentialCollection = [
+        {appName: 'Google', userId: 'kaun.jovi', passwordSetOn: new Date('1987-05-21'), password: 'Awesome'},
+        {appName: 'Yahoo', userId: 'kaun.jovi', passwordSetOn: new Date('1987-04-25'),  password: 'OutOfTheWorld'},
+        {appName: 'Google', userId: 'kaun.jovi', passwordSetOn: new Date('1987-05-21'), password: 'Awesome'},
+        {appName: 'Yahoo', userId: 'kaun.jovi', passwordSetOn: new Date('1987-04-25'),  password: 'OutOfTheWorld'},
+        {appName: 'Google', userId: 'kaun.jovi', passwordSetOn: new Date('1987-05-21'), password: 'Awesome'},
+        {appName: 'Yahoo', userId: 'kaun.jovi', passwordSetOn: new Date('1987-04-25'),  password: 'OutOfTheWorld'},
+        {appName: 'Google', userId: 'kaun.jovi', passwordSetOn: new Date('1987-05-21'), password: 'Awesome'},
+        {appName: 'Yahoo', userId: 'kaun.jovi', passwordSetOn: new Date('1987-04-25'),  password: 'OutOfTheWorld'},
+        {appName: 'Google', userId: 'kaun.jovi', passwordSetOn: new Date('1987-05-21'), password: 'Awesome'},
+        {appName: 'Yahoo', userId: 'kaun.jovi', passwordSetOn: new Date('1987-04-25'),  password: 'OutOfTheWorld'},
+        {appName: 'Google', userId: 'kaun.jovi', passwordSetOn: new Date('1987-05-21'), password: 'Awesome'},
+        {appName: 'Yahoo', userId: 'kaun.jovi', passwordSetOn: new Date('1987-04-25'),  password: 'OutOfTheWorld'},
+        {appName: 'Google', userId: 'kaun.jovi', passwordSetOn: new Date('1987-05-21'), password: 'Awesome'},
+        {appName: 'Yahoo', userId: 'kaun.jovi', passwordSetOn: new Date('1987-04-25'),  password: 'OutOfTheWorld'},
+        {appName: 'Google', userId: 'kaun.jovi', passwordSetOn: new Date('1987-05-21'), password: 'Awesome'},
+        {appName: 'Yahoo', userId: 'kaun.jovi', passwordSetOn: new Date('1987-04-25'),  password: 'OutOfTheWorld'},
+        {appName: 'Hotmail', userId: 'kaun.jovi', passwordSetOn: new Date('1955-08-27'),  password: 'YouRockGuys'}
     ];
 });
+
+app.controller("createNewCredentialCtrl", function($scope){
+  
+}) ; 
 </script>
 
-<body>
-  <h1>My Passwords</h1>
+<body ng-app="passwordModule" ng-controller="passwordCtrl">
 
-  <div ng-app="passwordModule" ng-controller="passwordCtrl">
-    <ul>
-      <li ng-repeat="password in passwordList">{{password}}</li>
-    </ul>
-    <table st-table="rowCollection" class="table table-striped">
-      <thead>
-        <tr>
-          <th>first name</th>
-          <th>last name</th>
-          <th>birth date</th>
-          <th>balance</th>
-          <th>email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="row in rowCollection">
-          <td>{{row.firstName}}</td>
-          <td>{{row.lastName}}</td>
-          <td>{{row.birthDate}}</td>
-          <td>{{row.balance}}</td>
-          <td>{{row.email}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container ">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header ">
+        <a class="navbar-brand " href="# ">My Passwords</a>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <!--<nav class="navbar navbar-default navbar-fixed-top ">
+
+    <div class="container-fluid ">
+      <!-- Brand and toggle get grouped for better mobile display -->
+  <!--<div class="navbar-header ">
+        <div class="navbar-brand ">
+          MyPasswords
+          <input st-search=" " class="form-control " placeholder="Search ... " type="text " size="35 " />
+        </div>
+-->
+  <!--
+        <form class="navbar-form navbar-left navbar-brand " role="search ">
+          <div class="form-group ">
+            <input st-search=" " class="form-control navbar-brand " placeholder="Search ... " type="text " size="35 "/>
+          </div>
+        </form>-->
+
+  <!--</div>
+
+    </div>-->
+  <!-- /.container-fluid -->
+  <!--</nav>
+-->
+
+  <table class="table table-striped " st-table="displayedCollection" st-safe-src="credentialCollection">
+
+    <thead>
+      <tr>
+        <th colspan="6 ">
+          <input st-search=" " class="form-control " placeholder="Search ... " type="text " />
+        </th>
+      </tr>
+      <tr>
+        <th st-sort="credential.appName ">App</th>
+        <th st-sort="credential.userId ">Username</th>
+        <th>Password</th>
+        <th>Set on</th>
+        <th> </th>
+        <th> </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="credential in displayedCollection">
+        <td>{{credential.appName}}</td>
+        <td>{{credential.userId}}</td>
+        <td>{{credential.password}}</td>
+        <td>{{credential.passwordSetOn | date:"mediumDate"}}</td>
+        <td>
+          <button type="button " class="btn btn-sm btn-danger ">
+					    <i class="glyphicon glyphicon-remove-circle ">
+					    </i>
+				    </button>
+        </td>
+
+        <td>
+          <button type="button " class="btn btn-sm btn-success ">
+                <i class="glyphicon glyphicon-pencil ">
+                </i>
+              </button>
+        </td>
+
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <button type="button" ng-click="addRandomItem(row)" class="btn btn-sm btn-success">
+			<i class="glyphicon glyphicon-plus">
+			</i> Add New
+		</button>
   </div>
-
-  <!--Used Electron applications. -->
-  <!--<p>
-    Electron
-    <script> document.write(process.versions['electron']) </script> on
-    <script> document.write(process.platform) </script>
-  </p>-->
-
-  <!--Write some text in textbox:
-  <input type="text" ng-model="sometext" />
-
-  <h1>Hello {{sometext}}</h1>
-
-
-  <button toggle-insert-view class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-    <i class="material-icons">add</i>
-  </button>
-
-  <div class="">
-    <button generate-password class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">generate</button>
-    <button toggle-insert-view class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">cancel</button>
-    <button save-password class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-disabled="insertForm.$invalid">save</button>
-  </div>
-
-  <script type="text/javascript"> 
-      var fs = require('fs');
-      var file = fs.readFileSync('README.md'); 
-      document.write(file); 
-   </script>-->
 
 </body>
 
