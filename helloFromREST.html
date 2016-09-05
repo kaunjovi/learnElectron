@@ -1,0 +1,32 @@
+<html>
+<!--Fetch data from a REST service. -->
+<head>
+    <script src="./bower_components/angular/angular.min.js"></script>
+
+    <script> 
+
+    var app = angular.module("helloApp", []); 
+    app.controller("helloCtrl", function($scope, $http) {
+
+        $scope.name = "kaun jovi" ; 
+        
+        $http.get('http://rest-service.guides.spring.io/greeting')
+            .success(function(data, status, headers, config) {
+                console.log(data) ;
+                $scope.greetings = data ;  
+            }) ; 
+
+    });
+    </script>
+</head>
+
+<body>
+
+    <div ng-app="helloApp" ng-controller="helloCtrl">
+        <p>The name is {{name}}</p>
+        <p>The ID is {{greetings.id}}</p>
+        <p>The content is {{greetings.content}}</p>
+    </div>
+</body>
+
+</html>
