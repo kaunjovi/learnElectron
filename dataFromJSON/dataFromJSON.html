@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Data from JSON file. </title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="./dataFromJSON.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCntrl">
+    <h1>Data fetched from JSON file.</h1>
+    <h3>{{ greetings }}</h3>
+
+<table> 
+    <tr ng-repeat="credential in credentialCollection">
+        <td> {{ credential.appName }} </td>
+    </tr>
+</table>
+
+</body>
+
+
+
+</html>

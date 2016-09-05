@@ -1,0 +1,21 @@
+{
+    "credentials": [
+        {"appName": "Google", "userId": "kaun.jovi", "passwordSetOn": "1987-05-21", "password": "Awesome"},
+        {"appName": "Yahoo", "userId": "kaun.jovi", "passwordSetOn": "1987-04-25",  "password": "OutOfTheWorld"},
+        {"appName": "Google", "userId": "kaun.jovi", "passwordSetOn": "1987-05-21", "password": "Awesome"},
+        {"appName": "Yahoo", "userId": "kaun.jovi", "passwordSetOn": "1987-04-25",  "password": "OutOfTheWorld"},
+        {"appName": "Google", "userId": "kaun.jovi", "passwordSetOn": "1987-05-21", "password": "Awesome"},
+        {"appName": "Yahoo", "userId": "kaun.jovi", "passwordSetOn": "1987-04-25",  "password": "OutOfTheWorld"},
+        {"appName": "Google", "userId": "kaun.jovi", "passwordSetOn": "1987-05-21", "password": "Awesome"},
+        {"appName": "Yahoo", "userId": "kaun.jovi", "passwordSetOn": "1987-04-25",  "password": "OutOfTheWorld"},
+        {"appName": "Google", "userId": "kaun.jovi", "passwordSetOn": "1987-05-21", "password": "Awesome"},
+        {"appName": "Yahoo", "userId": "kaun.jovi", "passwordSetOn": "1987-04-25",  "password": "OutOfTheWorld"},
+        {"appName": "Google", "userId": "kaun.jovi", "passwordSetOn": "1987-05-21", "password": "Awesome"},
+        {"appName": "Yahoo", "userId": "kaun.jovi", "passwordSetOn": "1987-04-25",  "password": "OutOfTheWorld"},
+        {"appName": "Google", "userId": "kaun.jovi", "passwordSetOn": "1987-05-21", "password": "Awesome"},
+        {"appName": "Yahoo", "userId": "kaun.jovi", "passwordSetOn": "1987-04-25",  "password": "OutOfTheWorld"},
+        {"appName": "Google", "userId": "kaun.jovi", "passwordSetOn": "1987-05-21", "password": "Awesome"},
+        {"appName": "Yahoo", "userId": "kaun.jovi", "passwordSetOn": "1987-04-25",  "password": "OutOfTheWorld"},
+        {"appName": "Hotmail", "userId": "kaun.jovi", "passwordSetOn": "1955-08-27",  "password": "YouRockGuys"}
+    ]
+}
