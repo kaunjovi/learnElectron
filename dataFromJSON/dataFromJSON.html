@@ -10,6 +10,9 @@
     <h1>Data fetched from JSON file.</h1>
     <h3>{{ greetings }}</h3>
 
+<input type="button" value="Choose a file" id="create-new-file" ng-click="openAFile()"/>
+
+
 <table> 
     <tr ng-repeat="credential in credentialCollection">
         <td> {{ credential.appName }} </td>
