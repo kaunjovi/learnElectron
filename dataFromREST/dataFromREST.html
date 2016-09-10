@@ -1,0 +1,23 @@
+<html>
+
+<head>
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./credential-controller.js"></script>
+    <script src="./credential-service.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="CredentialController as ctrl">
+    <h1>Let's fetch some data from REST </h1>
+
+
+    <table>
+        <tr ng-repeat="credential in ctrl.credentials">
+            <td> {{ credential.name }} </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
